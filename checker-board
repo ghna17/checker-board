@@ -1,0 +1,19 @@
+from graphics import *
+win = GraphWin("Checkers",400,400)
+win.setCoords(0,0,340,340)
+for g in range(8):
+	for i in range(8):
+		square = Rectangle(Point(10+i*40,10+g*40),Point(50+i*40,50+g*40))
+		if i % 2 == 0 and g % 2 == 0:
+			square.setFill("red")
+		elif i % 2 == 1 and g% 2 == 1:
+			square.setFill("red")
+		elif i % 2 == 0 and g % 2 == 1:
+			square.setFill("black")
+		elif i % 2 == 1 and g % 2 == 0:
+			square.setFill("black")
+		square.draw(win)
+
+
+win.getMouse()
+win.close()
